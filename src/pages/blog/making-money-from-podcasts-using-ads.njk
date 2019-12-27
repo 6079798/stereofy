@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "Making Money From Podcasts Using Ads",
+    image: "/images/blog/black-disc-jockey-music-pad-159206.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}

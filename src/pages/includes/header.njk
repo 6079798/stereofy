@@ -1,0 +1,32 @@
+{% set navLinks = {
+    'Home': '/',
+    'Blog': '/blog',
+    'Videos': '/videos.html',
+    'Contact Us': '/contacts.html'
+} %}
+
+<header class="header">
+    <div class="header__inner">
+        <a href="/" class="header__logo" aria-label="Logo">
+            <img src="/img/logo.png" alt="Stereofy - Your world of Sounds">
+        </a>
+        <nav class="nav">
+            <ul class="nav__links">
+                {% for text, url in navLinks %}
+                    <li><a href="{{ url }}"
+                           class="nav__link{% if pageId === text %} nav__link--active{% endif %}">{{ text }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <button type="button" data-nav-toggle class="nav-btn" aria-label="Toggle main menu">
+            <span class="nav-btn__bar"></span>
+            <span class="nav-btn__bar nav-btn__bar--middle"></span>
+            <span class="nav-btn__bar"></span>
+        </button>
+        <button type="button" class="cart header__cart" aria-label="Cart"></button>
+        <div class="search header__search">
+            <input class="search__input" type="text">
+            <button type="button" class="search__btn" aria-label="Open search"></button>
+        </div>
+    </div>
+</header>

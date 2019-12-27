@@ -1,0 +1,112 @@
+{% set pageId = 'Blog' %}
+
+{% set posts = [{
+    image: "/images/blog/black-vinyl-record-playing-on-turntable-1389429.jpg",
+    alt: "Lorem ipsum",
+    title: "Best Radio Broadcasting Software You",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/best-radio-broadcasting-software-you.html",
+    user: "Jamie Ashbrook",
+    avatar: "/images/users/user.svg"
+}, {
+    image: "/images/blog/photography-of-woman-listening-to-music-761963.jpg",
+    alt: "Lorem ipsum",
+    title: "The All Female-Led Station",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/the-all-female-led-station.html",
+    user: "Jane Doe",
+    avatar: "/images/users/user.svg"
+}, {
+    image: "/images/blog/playing-music-musician-classic-33597.jpg",
+    alt: "Lorem ipsum",
+    title: "Complete Guide to Getting Started",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/complete-guide-to-getting-started.html",
+    user: "Aaron Corkin",
+    avatar: "/images/users/user.svg"
+}, {
+    image: "/images/blog/group-of-people-inside-disco-house-167491.jpg",
+    alt: "Lorem ipsum",
+    title: "Audio Routing for Mac Broadcasters",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/audio-routing-for-mac-broadcasters.html",
+    user: "Jim Cretney",
+    avatar: "/images/users/user.svg"
+}, {
+    image: "/images/blog/analogue-antique-audio-business-290657.jpg",
+    alt: "Lorem ipsum",
+    title: "Bringing Live DJ Sets to Music Festivals",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/bringing-live-dj-sets-to-music-festivals.html",
+    user: "Aaron Corkin",
+    avatar: "/images/users/user.svg"
+}, {
+    image: "/images/blog/black-disc-jockey-music-pad-159206.jpg",
+    alt: "Lorem ipsum",
+    title: "Making Money From Podcasts Using Ads",
+    text: "Ne sententiae constituam eam. Paulo omnes oblique sea ea, inani persius sea,",
+    url: "/blog/making-money-from-podcasts-using-ads.html",
+    user: "Laura Shenton",
+    avatar: "/images/users/user.svg"
+}] %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <section data-sticky-trigger class="page__header">
+        <h1 class="page__title">Blog</h1>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="/">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+                Blog
+            </li>
+        </ul>
+    </section>
+    <div class="page__container page__container--with-sidebar">
+        <main class="page__content">
+            <section class="blog">
+                <ul class="blog__items">
+                    {% for post in posts %}
+                        <li class="blog__item">
+                            <article>
+                                <a href="{{ post.url }}" class="blog__link">
+                                    <div class="blog__cover">
+                                        <img src="{{ post.image }}" alt="{{ post.alt }}">
+                                    </div>
+                                    <div class="blog__footer">
+                                        <h2 class="blog__title">{{ post.title }}</h2>
+                                        <p class="blog__intro">{{ post.text }}</p>
+                                        <div class="blog__user">
+                                            <span class="blog__arrow"></span>
+                                            <img class="blog__avatar" src="{{ post.avatar }}" alt="User avatar">
+                                            <span class="blog__username">{{ post.user }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <ul class="pagination page__pagination">
+                <li class="pagination__item">
+                    <a href="#">1</a>
+                </li>
+                <li class="pagination__item pagination__item--current">
+                    <span>2</span>
+                </li>
+                <li class="pagination__item">
+                    <a href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#">Next</a>
+                </li>
+            </ul>
+        </main>
+        {% include 'sidebar.njk' %}
+    </div>
+{% endblock %}

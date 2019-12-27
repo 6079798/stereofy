@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "Bringing Live DJ Sets to Music Festivals",
+    image: "/images/blog/analogue-antique-audio-business-290657.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}Bringing Live DJ Sets to Music Festivals{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}

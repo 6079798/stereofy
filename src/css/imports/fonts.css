@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+    url('../fonts/poppins-v9-latin-regular.woff2') format('woff2'),
+    url('../fonts/poppins-v9-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Poppins Medium'), local('Poppins-Medium'),
+    url('../fonts/poppins-v9-latin-500.woff2') format('woff2'),
+    url('../fonts/poppins-v9-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fira Sans Condensed Regular'), local('FiraSansCondensed-Regular'),
+    url('../fonts/fira-sans-condensed-v4-latin-regular.woff2') format('woff2'),
+    url('../fonts/fira-sans-condensed-v4-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Fira Sans Condensed SemiBold'), local('FiraSansCondensed-SemiBold'),
+    url('../fonts/fira-sans-condensed-v4-latin-600.woff2') format('woff2'),
+    url('../fonts/fira-sans-condensed-v4-latin-600.woff') format('woff');
+}
+

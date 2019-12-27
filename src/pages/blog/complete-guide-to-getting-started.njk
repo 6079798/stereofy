@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "Complete Guide to Getting Started",
+    image: "/images/blog/playing-music-musician-classic-33597.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}

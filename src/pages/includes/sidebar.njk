@@ -1,0 +1,66 @@
+<aside class="sidebar page__sidebar">
+    <form class="sidebar__search">
+        <input class="sidebar__input" type="search" placeholder="Search">
+        <button type="submit" class="sidebar__btn" aria-label="Search"></button>
+    </form>
+    <div class="categories sidebar__categories">
+        <h3 class="sidebar__title categories__title">
+            <a href="#">Categories</a>
+        </h3>
+        <ul class="categories__items">
+            {% set categories = {
+                Dessert: 3,
+                Vegetarian: 5,
+                Western: 2,
+                Photograph: 1,
+                Uncategorized: 0
+            } %}
+            {% for category, count in categories %}
+                <li class="categories__item">
+                    <a class="categories__link" href="#">{{ category }}</a>
+                    <span class="categories__count">{{ count }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="news sidebar__news">
+        <h3 class="sidebar__title news__title"><a href="#">Latest News</a></h3>
+        <ul class="news__items">
+            {% set news = [{
+                date:"19 - JAN - 2017",
+                text: "Nullam at mauris fauci bus orci luctus pel",
+                image: "/images/news/01.jpg"
+            }, {
+                date:"25 - JAN - 2017",
+                text: "Nullam at mauris fauci bus orci luctus pel",
+                image: "/images/news/01.jpg"
+            }, {
+                date:"28 - JAN - 2017",
+                text: "Nullam at mauris fauci bus orci luctus pel",
+                image: "/images/news/01.jpg"
+            }] %}
+            {% for item in news %}
+                <li>
+                    <a class="news__link" href="#">
+                        <div class="news__item">
+                            <img class="news__img" src="{{ item.image }}" alt="Latest News">
+                            <div class="news__text">
+                                <span class="news__date">{{ item.date }}</span>
+                                {{ item.text }}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="tags sidebar__tags">
+        <h3 class="sidebar__title tags__title">Tags</h3>
+        <ul class="tags__items">
+            {% set tags = ["Business", "Success", "Client Meetings", "Charity"] %}
+            {% for tag in tags %}
+                <li class="tags__item"><a class="tags__link" href="#">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "Audio Routing for Mac Broadcasters",
+    image: "/images/blog/group-of-people-inside-disco-house-167491.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}

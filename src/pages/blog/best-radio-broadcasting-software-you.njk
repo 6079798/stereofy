@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "Best Radio Broadcasting Software You",
+    image: "/images/blog/black-vinyl-record-playing-on-turntable-1389429.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}

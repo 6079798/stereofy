@@ -1,0 +1,151 @@
+<section data-sticky-trigger class="page__header">
+    <h1 class="page__title">{{ post.title }}</h1>
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+            <a href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <a href="/blog">Blog</a>
+        </li>
+        <li class="breadcrumbs__item">{{ post.title }}</li>
+    </ul>
+</section>
+<div class="page__container page__container--with-sidebar">
+    <main class="page__content">
+        <article class="post">
+            <div class="post__content">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+                <h2>Bringing Live DJ Sets to Music Festivals.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod risus ligula, id luctus
+                    lectus volutpat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id mi sit
+                    amet nibh iaculis faucibus vitae et magna. Nulla bibendum, lectus et molestie vestibulum, tellus</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed bibendum leo. Mauris mauris massa,
+                    eleifend et purus vel, feugiat rutrum nulla. Cras vitae est vel ipsum faucibus fermentum a ultricies
+                    urna. Cum sociis natoque penatibus et magnis dis parturient montes. Morbi mollis vestibulum
+                    sollicitudin. Nunc in eros a justo facilisis rutrum. Aenean id ullamcorper libero. Vestibulum
+                    imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nam ac elit a ante commodo
+                    tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.</p>
+                <blockquote>
+                    <p>It's crazy, but the things you love, prospective buyers might hate—and that means you might
+                        have a hard time unloading your home when it comes time to sell.</p>
+                    <footer>DE COCK</footer>
+                </blockquote>
+                <p>Donec gravida malesuada lacus, eget tristique Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aliquam vulputate, tortor nec commodo ultricies, lectus nisl facilisis enim, vitae viverra
+                    urna nulla sed turpis. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec
+                    maximus placerat tempor.</p>
+            </div>
+            <footer class="post__footer">
+                <ul class="post__props">
+                    <li class="post__prop">By admin</li>
+                    <li class="post__prop">February 20th, 2018</li>
+                </ul>
+                <ul class="post__socials">
+                    <li>
+                        <a class="post__social" href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.07 234.15">
+                                <path d="M78.05 78.05V54.82c0-10.49 2.32-15.8 18.6-15.8h20.42V0H83C41.22 0 27.44 19.15 27.44 52.01v26.04H0v39.02h27.44v117.08h50.6V117.07h34.4l4.63-39.02H78.05z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post__social post__social--tw" href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.26 40.03">
+                                <path d="M49.26 4.74c-1.8.8-3.76 1.35-5.8 1.59A10.12 10.12 0 0047.9.73c-1.95 1.17-4.11 2-6.42 2.46A10.1 10.1 0 0024 10.11c0 .79.09 1.56.26 2.3A28.7 28.7 0 013.43 1.85a10.1 10.1 0 003.13 13.5c-1.66-.06-3.22-.51-4.58-1.27v.13c0 4.9 3.48 8.98 8.1 9.9a10.16 10.16 0 01-4.56.18 10.12 10.12 0 009.44 7.02A20.28 20.28 0 010 35.49a28.6 28.6 0 0015.5 4.54c18.58 0 28.75-15.4 28.75-28.75 0-.44-.01-.88-.03-1.31a20.47 20.47 0 005.04-5.23z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post__social post__social--google" href="#" aria-label="Google +">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.75 28.13">
+                                <path d="M14.06 0a14.06 14.06 0 1013.78 11.25l-.08-.31h-13.7v4.69h9.38a9.52 9.52 0 01-9.38 7.8A9.37 9.37 0 1120.2 6.99l3.36-3.3A14 14 0 0014.06 0zm21.88 6.25v4.69h-4.69v3.12h4.69v4.69h3.12v-4.69h4.69v-3.12h-4.69V6.25z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post__social post__social--inst" href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                                <path
+                                        d="M18 5.23v7.54A5.23 5.23 0 0112.77 18H5.23A5.23 5.23 0 010 12.77V5.23A5.23 5.23 0 015.23 0h7.54A5.23 5.23 0 0118 5.23zm-1.4 0c0-2.11-1.72-3.82-3.83-3.82H5.23A3.83 3.83 0 001.4 5.23v7.54c0 2.1 1.71 3.82 3.82 3.82h7.54c2.1 0 3.82-1.71 3.82-3.82zM13.84 9a4.86 4.86 0 11-9.71-.01 4.86 4.86 0 019.71 0zm-1.4 0a3.45 3.45 0 10-6.9 0 3.45 3.45 0 006.9 0zm1.47-5.63a.7.7 0 110 1.41.7.7 0 010-1.4z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="post__tags">
+                    <li>
+                        <a class="post__tag" href="#">Blog post</a>
+                    </li>
+                    <li>
+                        <a class="post__tag" href="#">Artistic</a>
+                    </li>
+                    <li>
+                        <a class="post__tag" href="#">Real estate</a>
+                    </li>
+                    <li>
+                        <a class="post__tag" href="#">Family home</a>
+                    </li>
+                </ul>
+            </footer>
+        </article>
+        <section class="comments post__comments">
+            <h2 class="comments__title">Comments (2)</h2>
+            <div class="comments__items">
+                <article class="comments__item">
+                    <img class="comments__avatar" src="/images/users/01.jpeg" alt="User avatar">
+                    <div class="comments__comment">
+                        <header class="comments__header">
+                            <div class="comments__user">Kavin Smith <span>CEO CHI ART PRO</span></div>
+                            <button class="comments__btn">Reply</button>
+                        </header>
+                        <div class="comments__message">
+                            <p>Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                                interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a
+                                vehiculaa,Duis lacus</p>
+                        </div>
+                        <div class="comments__reply">
+                            <img class="comments__avatar" src="/images/users/02.jpeg" alt="User avatar">
+                            <form class="comments__form">
+                                <input type="text" class="comments__input" placeholder="Leave a message">
+                                <button type="submit" class="comments__btn">Reply</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                <article class="comments__item">
+                    <img class="comments__avatar" src="/images/users/01.jpeg" alt="User avatar">
+                    <div class="comments__comment">
+                        <header class="comments__header">
+                            <div class="comments__user">Kavin Smith <span>CEO CHI ART PRO</span></div>
+                            <button class="comments__btn">Reply</button>
+                        </header>
+                        <div class="comments__message">
+                            <p>Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                                interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a
+                                vehiculaa, Duis lacus</p>
+                        </div>
+                        <div class="comments__reply">
+                            <img class="comments__avatar" src="/images/users/02.jpeg" alt="User avatar">
+                            <div class="comments__message">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, reprehenderit,
+                                    voluptates! A, aperiam fugit illo impedit odit ut velit! Assumenda ducimus eos hic
+                                    neque, nostrum omnis optio quas quo saepe.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, saepe!</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <h2 class="comments__title">Leave a comment</h2>
+            <form class="comments__form">
+                <input class="comments__input" type="text" name="name" placeholder="Name">
+                <input class="comments__input" type="email" name="email" placeholder="Email">
+                <textarea class="comments__textarea" name="message" placeholder="Message"></textarea>
+                <button class="comments__submit" type="submit">
+                    Send now
+                </button>
+            </form>
+        </section>
+    </main>
+    {% include 'sidebar.njk' %}
+</div>

@@ -1,0 +1,110 @@
+{% set pageId = 'Contact Us' %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+    <section data-sticky-trigger class="page__header">
+        <h1 class="page__title">Contact Us</h1>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="/">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+                Contact Us
+            </li>
+        </ul>
+    </section>
+    <main class="page__content">
+        <section class="contacts">
+            <div class="page__container">
+                <div class="contacts__inner">
+                    <ul class="contacts__items" aria-label="Contacts">
+                        <li class="contacts__item">
+                            <div class="contacts__phone-icon"></div>
+                            <span>Phone</span>
+                            <ul class="contacts__text">
+                                <li>Phone 01: <a href="tel:00918547632521">(0091) 8547 632521</a></li>
+                                <li>Phone 02: <a href="tel:0849654788">(084) 965 4788</a></li>
+                            </ul>
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__address-icon"></div>
+                            <span>Address</span>
+                            <address class="contacts__text">
+                                5th Floor, AH Building, 756 New Design St
+                                Melbourne, Australia.
+                            </address>
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__email-icon"></div>
+                            <span>Email</span>
+                            <ul class="contacts__text">
+                                <li><a href="mailto:support@yourdomain.com">support@yourdomain.com</a></li>
+                                <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2 class="title contacts__title">Get in touch</h2>
+                    <form class="form contacts__form">
+                        <div class="form__group form__input">
+                            <label>
+                                <span>Your Name</span>
+                                <input data-pristine-required data-pristine-name name="name" type="text"
+                                       placeholder="Sohel Nazmul">
+                            </label>
+                        </div>
+                        <div class="form__group form__input">
+                            <label>
+                                <span>Your e-mail</span>
+                                <input data-pristine-required data-pristine-email-message="Invalid email" name="email"
+                                       type="email"
+                                       placeholder="@gmail.com">
+                            </label>
+                        </div>
+                        <div class="form__group form__textarea">
+                            <label>
+                                <span>Your message</span>
+                                <textarea data-pristine-required name="message"
+                                          placeholder="Enter your message here"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__group form__checkbox">
+                            <input checked data-pristine-required data-pristine-required-message="Check the checkbox"
+                                   type="checkbox" id="agreement" name="agreement">
+                            <label for="agreement">
+                                I agree with the terms and conditions
+                            </label>
+                        </div>
+                        <button class="form__submit" type="submit">Send Message</button>
+                    </form>
+                    <div id="map" class="contacts__map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/js/contacts.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_US"></script>
+    <script>
+      ymaps.ready(init);
+
+      function init() {
+        var map = new ymaps.Map("map", {
+          center: [-37.98779153824138, 145.1324878554686],
+          zoom: 10
+        });
+        var marker = new ymaps.GeoObject({
+          geometry: {
+            type: "Point",
+            coordinates: [-37.98779153824138, 145.1324878554686]
+          }
+        });
+        map.behaviors.disable('scrollZoom');
+        map.geoObjects.add(marker);
+      }
+    </script>
+{% endblock %}

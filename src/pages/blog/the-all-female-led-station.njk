@@ -1,0 +1,14 @@
+{% set pageId = 'Blog' %}
+
+{% set post = {
+    title: "The All Female-Led Station",
+    image: "/images/blog/photography-of-woman-listening-to-music-761963.jpg"
+} %}
+
+{% extends 'layout.njk' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/blogPost.njk' %}
+{% endblock %}
